@@ -50,5 +50,19 @@ public class CarClass {
         setCurrentFuel(m_currentFuel + fuel);
         System.out.println(m_make + " " + m_model + " refueled. Current fuel: " + fuel + " gallons.");
     }
+    public static void main(String[]args){
+        CarClass car1 = new CarClass("Toyota", "Camry", 14 ,32);
+        CarClass car2 = new CarClass("Ford",  "F-150", 26, 20);
+        
+        car1.drive(200);
+        car1.refuel(5);
+        car2.drive(190);
+        car2.refuel(10);
 
+        System.out.println(car1.getMake() + " " +car1.getModel() + " has " + car1.getFuelCapacity() + " gallons left");
+        System.out.println(car2.getMake() + " " +car2.getModel() + " has " + car2.getFuelCapacity() + " gallons left");
+
+        
+    }
+        
 }
